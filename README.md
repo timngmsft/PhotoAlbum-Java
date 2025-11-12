@@ -1,6 +1,6 @@
-# Photo Album Application - Java Spring Boot with Oracle DB
+# Photo Album Application - Java Spring Boot with PostgreSQL
 
-A photo gallery application built with Spring Boot and Oracle Database, featuring drag-and-drop upload, responsive gallery view, and full-size photo details with navigation.
+A photo gallery application built with Spring Boot and PostgreSQL Database, featuring drag-and-drop upload, responsive gallery view, and full-size photo details with navigation.
 
 ## Features
 
@@ -10,14 +10,14 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 - 📊 **Metadata Display**: View file size, dimensions, aspect ratio, and upload timestamp
 - ⬅️➡️ **Photo Navigation**: Previous/Next buttons to browse through photos
 - ✅ **Validation**: File type and size validation (JPEG, PNG, GIF, WebP; max 10MB)
-- 🗄️ **Database Storage**: Photo data stored as BLOBs in Oracle Database
+- 🗄️ **Database Storage**: Photo data stored as bytea (binary data) in PostgreSQL Database
 - 🗑️ **Delete Photos**: Remove photos from both gallery and detail views
 - 🎨 **Modern UI**: Clean, responsive design with Bootstrap 5
 
 ## Technology Stack
 
 - **Framework**: Spring Boot 2.7.18 (Java 8)
-- **Database**: Oracle Database 21c Express Edition
+- **Database**: PostgreSQL 15-alpine
 - **Templating**: Thymeleaf
 - **Build Tool**: Maven
 - **Frontend**: Bootstrap 5.3.0, Vanilla JavaScript
@@ -27,7 +27,7 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 
 - Docker Desktop installed and running
 - Docker Compose (included with Docker Desktop)
-- Minimum 4GB RAM available for Oracle DB container
+- Minimum 2GB RAM available for PostgreSQL container
 
 ## Quick Start
 
@@ -44,14 +44,14 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
    ```
 
    This will:
-   - Start Oracle Database 21c Express Edition container
+   - Start PostgreSQL 15-alpine container
    - Build the Java Spring Boot application
    - Start the Photo Album application container
    - Automatically create the database schema using JPA/Hibernate
 
 3. **Wait for services to start**:
-   - Oracle DB takes 2-3 minutes to initialize on first run
-   - Application will start once Oracle is healthy
+   - PostgreSQL takes 10-15 seconds to initialize on first run
+   - Application will start once PostgreSQL is healthy
 
 4. **Access the application**:
    - Open your browser and navigate to: **http://localhost:8080**
@@ -59,12 +59,11 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 
 ## Services
 
-## Oracle Database
-- **Image**: `container-registry.oracle.com/database/express:21.3.0-xe`
-- **Ports**: 
-  - `1521` (database) - mapped to host port 1521
-  - `5500` (Enterprise Manager) - mapped to host port 5500
-- **Database**: `XE` (Express Edition)
+## PostgreSQL Database
+- **Image**: `postgres:15-alpine`
+- **Port**: 
+  - `5432` (database) - mapped to host port 5432
+- **Database**: `photoalbum`
 - **Schema**: `photoalbum`
 - **Username/Password**: `photoalbum/photoalbum`
 
@@ -72,8 +71,8 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 - **Port**: `8080` (mapped to host port 8080)
 - **Framework**: Spring Boot 2.7.18
 - **Java Version**: 8
-- **Database**: Connects to Oracle container
-- **Photo Storage**: All photos stored as BLOBs in database (no file system storage)
+- **Database**: Connects to PostgreSQL container
+- **Photo Storage**: All photos stored as bytea in database (no file system storage)
 - **UUID System**: Each photo gets a globally unique identifier for cache-busting
 
 ## Database Setup
@@ -81,24 +80,24 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 The application uses Spring Data JPA with Hibernate for automatic schema management:
 
 1. **Automatic Schema Creation**: Hibernate automatically creates tables and indexes
-2. **User Creation**: Oracle init scripts create the `photoalbum` user
+2. **User Creation**: PostgreSQL init scripts create the `photoalbum` user
 3. **No Manual Setup Required**: Everything is handled automatically
 
 ### Database Schema
 
-The application creates the following table structure in Oracle:
+The application creates the following table structure in PostgreSQL:
 
-#### PHOTOS Table
-- `ID` (VARCHAR2(36), Primary Key, UUID Generated)
-- `ORIGINAL_FILE_NAME` (VARCHAR2(255), Not Null)
-- `STORED_FILE_NAME` (VARCHAR2(255), Not Null)
-- `FILE_PATH` (VARCHAR2(500), Nullable)
-- `FILE_SIZE` (NUMBER, Not Null)
-- `MIME_TYPE` (VARCHAR2(50), Not Null)
-- `UPLOADED_AT` (TIMESTAMP, Not Null, Default SYSTIMESTAMP)
-- `WIDTH` (NUMBER, Nullable)
-- `HEIGHT` (NUMBER, Nullable)
-- `PHOTO_DATA` (BLOB, Not Null)
+#### photos Table
+- `id` (VARCHAR(36), Primary Key, UUID Generated)
+- `original_file_name` (VARCHAR(255), Not Null)
+- `stored_file_name` (VARCHAR(255), Not Null)
+- `file_path` (VARCHAR(500), Nullable)
+- `file_size` (BIGINT, Not Null)
+- `mime_type` (VARCHAR(50), Not Null)
+- `uploaded_at` (TIMESTAMP, Not Null, Default CURRENT_TIMESTAMP)
+- `width` (INTEGER, Nullable)
+- `height` (INTEGER, Nullable)
+- `photo_data` (BYTEA, Not Null)
 
 #### Indexes
 - `IDX_PHOTOS_UPLOADED_AT` (Index on UPLOADED_AT for chronological queries)
