@@ -1,0 +1,11 @@
+
+# Ignore all files by default
+*
+
+# But track these specific files
+!.gitignore
+!assessment-config.yaml
+!assessment-plan.md
+!result/
+!result/summary.md
+!result/report.json

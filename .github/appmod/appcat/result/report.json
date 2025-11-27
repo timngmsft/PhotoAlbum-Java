@@ -1,0 +1,1768 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2025-11-27T03:01:51.408090001Z",
+    "analysisEndTime": "2025-11-27T03:03:04.614216861Z",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://aka.ms/appcat-privacy-mode",
+    "targetIds": [
+      "azure-aks",
+      "azure-appservice",
+      "azure-container-apps"
+    ],
+    "targetDisplayNames": [
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Container Apps"
+    ],
+    "capabilities": [],
+    "os": []
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 26,
+    "totalIncidents": 75,
+    "totalEffort": 85,
+    "charts": {
+      "severity": {
+        "mandatory": 13,
+        "optional": 0,
+        "potential": 31,
+        "information": 31
+      },
+      "category": {
+        "database-migration": 6,
+        "deprecated-apis": 1,
+        "framework-upgrade": 10,
+        "java-version-upgrade": 3,
+        "local-credential": 3,
+        "spring-migration": 4
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 26,
+      "storyPoints": 85,
+      "properties": {
+        "appName": "photo-album",
+        "jdkVersion": "1.8",
+        "frameworks": [
+          "Spring Boot",
+          "Spring"
+        ],
+        "languages": [
+          "Java"
+        ],
+        "tools": [
+          "Maven"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "azure-password-01000",
+          "incidentId": "83a39ca0-d99b-4315-aa91-c240c3c46085",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 12,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-password-01000",
+          "incidentId": "53cde467-c610-46ac-913a-502f80b01dbd",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 4,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-password-01000",
+          "incidentId": "93a845fa-1caa-4536-86c7-6b6a6411f252",
+          "location": "src/test/resources/application-test.properties",
+          "locationKind": "File",
+          "line": 5,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-database-microsoft-oracle-07000",
+          "incidentId": "f16d86ad-6250-48d0-9b5e-953c3f2e8993",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 52,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-database-microsoft-oracle-07000",
+          "incidentId": "514a682c-00ff-46fb-a5b5-5ee20b945515",
+          "location": "docker-compose.yml",
+          "locationKind": "File",
+          "line": 32,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-database-microsoft-oracle-07000",
+          "incidentId": "c5fff43a-9d0d-489d-af9a-0d1a72df8b43",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 10,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-database-microsoft-oracle-07000",
+          "incidentId": "13371432-e2b7-4289-adfb-44d2a48e9eb5",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 2,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-database-microsoft-oracle-07000",
+          "incidentId": "a729332b-8349-477a-85b5-ff102098c025",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 13,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-database-microsoft-oracle-07000",
+          "incidentId": "71394e6f-9513-47df-860c-3863e094c0f8",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 5,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-framework-version-01000",
+          "incidentId": "450a227f-b795-4ff0-918a-2f1ddf341026",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 34,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-framework-version-01000",
+          "incidentId": "7d90a884-face-43ea-aa22-c5b10a6f72c5",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 46,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-framework-version-01000",
+          "incidentId": "a5d0b18b-b660-46fb-a0b4-ffb01e4db8b0",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 78,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-java-version-02000",
+          "incidentId": "9d340a88-f053-4d19-afcd-dda35ceb8bfb",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 24,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-java-version-02000",
+          "incidentId": "2c3af3ab-52ef-4885-bfc9-695c0f1ae90c",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 25,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-java-version-02000",
+          "incidentId": "431db03a-e2dd-4c99-8fe8-788741b3e36b",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 26,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "80f42c5f-99cf-481b-8afc-95f41f244cc8",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 78,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "89c6f939-f626-49bd-abaf-40cf7dab55ea",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 46,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "2b273231-4a65-45f4-a36e-d80c5c8ec738",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 40,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "0bd91056-c17d-4473-a9cf-89c10c3ddcf4",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 34,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "534bb444-e331-4dbe-9ca4-126b903d8424",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 72,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "13c2a154-6647-43ed-acb2-61340d22f9d4",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 92,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "32aa33f4-80d2-46b1-a8c4-9513d19946b8",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 59,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-port-01000",
+          "incidentId": "cde57b65-81b6-4935-92f2-ae694fd7f05b",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 24,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 1,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 1,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-port-01000",
+          "incidentId": "3ccea01e-25e1-4285-8ba9-e83da8c6f391",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 2,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 1,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 1,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-restricted-config-01000",
+          "incidentId": "40d916ce-b1e6-4f83-9c52-3f53cf34c107",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 2,
+          "column": 0,
+          "targets": {
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-restricted-config-01000",
+          "incidentId": "6e71b5df-ea14-49d4-a3fd-ea6b2c85f236",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 24,
+          "column": 0,
+          "targets": {
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "discover-properties-file",
+          "incidentId": "5cb64385-f2c5-402c-9b2b-ccd7a8bfc7ad",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-properties-file",
+          "incidentId": "82a3effc-c36a-446f-9080-5173e5118bcf",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-properties-file",
+          "incidentId": "1dc294be-fbf5-43a7-82ad-675d3c79d81d",
+          "location": "src/test/resources/application-test.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "412fa6dc-b97c-4db3-a4d9-83d268316c27",
+          "location": "src/main/java/com/photoalbum/PhotoAlbumApplication.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "543699ec-ffb9-4faa-8ead-08d9e4fd126c",
+          "location": "src/main/java/com/photoalbum/controller/DetailController.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "cfd585e4-91da-47d8-96d4-5cfc80b4b68d",
+          "location": "src/main/java/com/photoalbum/controller/HomeController.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "1b1552cf-6f25-496f-bade-80d544eff432",
+          "location": "src/main/java/com/photoalbum/controller/PhotoFileController.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "5d301afb-3d21-4bed-bfeb-1b4d8a32dd0a",
+          "location": "src/main/java/com/photoalbum/model/Photo.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "88b75733-cb85-4bf9-b87e-16cc0e39544e",
+          "location": "src/main/java/com/photoalbum/model/UploadResult.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "ab919658-4f34-454d-921c-baff3279bd36",
+          "location": "src/main/java/com/photoalbum/repository/PhotoRepository.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "f1a1d61c-a091-4c8b-b1bb-1fb6ab066a8f",
+          "location": "src/main/java/com/photoalbum/service/PhotoService.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "f5352c92-123c-4d99-b36a-8b3dcc3db170",
+          "location": "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "6670506c-8339-4499-a072-e568eadf0f79",
+          "location": "src/main/java/com/photoalbum/util/MathUtil.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "9ceca8fc-be98-4a7c-a0b1-7fc36b04eb97",
+          "location": "src/test/java/com/photoalbum/PhotoAlbumApplicationTests.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-maven-xml",
+          "incidentId": "c2351c53-67c0-41b9-805a-63c5f1c561f4",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "oracle2openjdk-00004",
+          "incidentId": "2a83aebf-20c7-4c12-ba60-e4a04527e00c",
+          "location": "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+          "locationKind": "File",
+          "line": 15,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 1,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 1,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 1,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=openjdk7/oraclejdk7"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "5878de56-8c67-4617-947a-0c3e9dd26488",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 10,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "37f8215f-4500-41dc-8326-29bf86ddb0b8",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 11,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "87cb10d2-5893-420f-adf1-1cd367eb8d30",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 12,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "e59142dd-2799-4f61-9ce3-c4f2ab96a8fe",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 13,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "162b5ad4-ad9f-4a50-bcee-575d90a80029",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 2,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "4f830823-a5f0-4cf1-bf01-442e21c0cf41",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 3,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "130013d2-5e58-40db-8fd7-dffc4de3df1d",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 4,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "f780ae6c-f9d2-41e4-a060-428e9eb669ce",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 5,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "7888959c-e847-425a-ad03-4de4ac71c048",
+          "location": "src/test/resources/application-test.properties",
+          "locationKind": "File",
+          "line": 2,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "4b960767-f1ee-455f-a83c-a677a71a7a8f",
+          "location": "src/test/resources/application-test.properties",
+          "locationKind": "File",
+          "line": 3,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "aa73a8ab-2068-42e3-93ce-747abb17835b",
+          "location": "src/test/resources/application-test.properties",
+          "locationKind": "File",
+          "line": 4,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0300",
+          "incidentId": "92ffe49c-dc0d-4b26-91d9-af16d37e123d",
+          "location": "src/test/resources/application-test.properties",
+          "locationKind": "File",
+          "line": 5,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "3rd-party-spring-03001",
+          "incidentId": "70346098-81e9-4318-9916-733ad02bd79b",
+          "location": "src/main/java/com/photoalbum/PhotoAlbumApplication.java",
+          "locationKind": "File",
+          "line": 9,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-database-01200",
+          "incidentId": "2616dc35-5b21-4ebb-a056-af7695883c73",
+          "location": "src/main/java/com/photoalbum/model/Photo.java",
+          "locationKind": "File",
+          "line": 15,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-database-01200",
+          "incidentId": "63839180-5bf9-4bd1-8e59-5e83783f0c00",
+          "location": "src/main/java/com/photoalbum/model/Photo.java",
+          "locationKind": "File",
+          "line": 16,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "javaee-technology-usage-00210",
+          "incidentId": "8f738f28-b60c-4a63-b60d-87fc681f9666",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0400",
+          "incidentId": "591b16eb-5615-4fc5-995c-ab7aa07b21dd",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "line": 33,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0400",
+          "incidentId": "4046381d-4c4c-43af-8ad5-9087bfaabfdc",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "line": 32,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "mvc-01220",
+          "incidentId": "0cf23436-9dd4-4055-919b-febe496293c7",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 34,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "non-xml-technology-usage-20000",
+          "incidentId": "2995fddd-0305-4e96-b568-49d0e63b5970",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-3rd-party-spring-03001-2",
+          "incidentId": "c6859831-d7ed-4c80-858d-527c66837119",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-3rd-party-spring-03001-1",
+          "incidentId": "5de8c20a-cc14-45cc-904a-8ad411da1bbf",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "javaee-technology-usage-00110",
+          "incidentId": "360589ec-cfcc-4f3b-8e15-6328903284c7",
+          "location": "src/main/java/com/photoalbum/model/Photo.java",
+          "locationKind": "File",
+          "line": 5,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "javaee-technology-usage-00110",
+          "incidentId": "416a5839-2c57-4750-a825-a859c4b69c89",
+          "location": "src/main/java/com/photoalbum/model/Photo.java",
+          "locationKind": "File",
+          "line": 6,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "javaee-technology-usage-00110",
+          "incidentId": "4352f0b2-d652-4d6b-9170-f59070e0178d",
+          "location": "src/main/java/com/photoalbum/model/Photo.java",
+          "locationKind": "File",
+          "line": 7,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "javaee-technology-usage-00110",
+          "incidentId": "51791469-bf09-4772-a94f-248d49e52048",
+          "location": "src/main/java/com/photoalbum/model/Photo.java",
+          "locationKind": "File",
+          "line": 4,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-technology-usage-0200",
+          "incidentId": "50a8c6c7-6293-42f3-8761-82c838b4d4fb",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0200",
+          "incidentId": "c8031dea-9491-4884-8743-668174c5be8a",
+          "location": "src/main/resources/application-docker.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0200",
+          "incidentId": "146503ce-4e40-408a-9295-ed00780c36b2",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0200",
+          "incidentId": "60146d3d-bdc7-43c0-9c37-f9fbdda92112",
+          "location": "src/test/resources/application-test.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-mvc-01200",
+          "incidentId": "9b879b7d-5ea9-4120-8acb-e57c94861296",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-technology-usage-0300",
+          "incidentId": "3f9abfde-1e76-401b-9dd8-dc1be25887d9",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-3rd-party-spring-03001-0",
+          "incidentId": "73896aea-6e10-48f2-b32b-a2f9f863504d",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "3rd-party-spring-03001": {
+      "id": "3rd-party-spring-03001",
+      "description": "",
+      "title": "Embedded framework - Spring Boot",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring Boot Configuration",
+        "tag=Spring Boot Auto-configuration",
+        "tag=Spring Boot Component Scan"
+      ]
+    },
+    "azure-database-microsoft-oracle-07000": {
+      "id": "azure-database-microsoft-oracle-07000",
+      "description": "Oracle database found. To migrate a Java application that uses an Oracle database to Azure, you can follow these recommendations:\n\n * **Migrate to Azure Database for PostgreSQL**: Azure recommends migrating Oracle databases to Azure Database for PostgreSQL Flexible Server as it provides better cost-effectiveness and performance. Create a managed PostgreSQL Flexible Server database in Azure and choose the appropriate pricing tier based on your application's requirements.\n\n * **Use migration tools**: Utilize the Azure Database Migration Service (DMS) or third-party tools to migrate your Oracle database schema and data to PostgreSQL. Consider using ora2pg or similar tools to convert Oracle-specific SQL to PostgreSQL-compatible SQL.\n\n * **Update database drivers and connection strings**: Replace Oracle JDBC drivers with PostgreSQL drivers in your Java application. Update connection strings from Oracle format (jdbc:oracle:thin:) to PostgreSQL format (jdbc:postgresql:).\n\n * **Review and convert Oracle-specific code**: Identify and convert Oracle-specific SQL functions, stored procedures, and PL/SQL code to PostgreSQL equivalents. Pay attention to data types, syntax differences, and built-in functions.\n\n * Enable **monitoring and diagnostics**: Utilize Azure Monitor to gain insights into the performance and health of your Java application and the underlying PostgreSQL database. Set up metrics, alerts, and log analytics to proactively identify and resolve issues.\n\n * Implement **security** measures: Apply security best practices to protect your Java application and the PostgreSQL database. This includes implementing authentication and authorization mechanisms with passwordless connections and leveraging Microsoft Defender for Cloud for threat detection and vulnerability assessments.\n\n * **Backup** your data: Azure Database for PostgreSQL provides automated backups by default. You can configure the retention period for backups based on your requirements. You can also enable geo-redundant backups, if needed, to enhance data durability and availability.",
+      "title": "Oracle database found",
+      "severity": "potential",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/postgresql",
+          "title": "Azure Database for PostgreSQL documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/postgresql/migrate/how-to-migrate-oracle-ora2pg",
+          "title": "Oracle to PostgreSQL migration guide"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/dms",
+          "title": "Azure Database Migration Service documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/azure-monitor",
+          "title": "Azure Monitor documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/defender-for-cloud",
+          "title": "Microsoft Defender for Cloud"
+        }
+      ],
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=cloud-readiness",
+        "category=database-migration",
+        "database",
+        "oracle",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "azure-java-version-02000": {
+      "id": "azure-java-version-02000",
+      "description": "The application is using an old Java version. It is strongly recommended to plan and execute a migration strategy to upgrade your application to the latest stable Java version.\nOlder Java versions may have known security vulnerabilities that can expose your application and infrastructure to potential attacks. Migrating to a supported version ensures that you benefit from the latest security patches and updates.",
+      "title": "Legacy Java version",
+      "severity": "mandatory",
+      "effort": 3,
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=java-upgrade",
+        "category=java-version-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "azure-password-01000": {
+      "id": "azure-password-01000",
+      "description": "Using clear passwords in property files is a security risk, as they can be easily compromised if the files are accessed by unauthorized individuals. To enhance the security of your application, it is recommended to employ secure credential management practices.\n\n * **Azure Key Vault**: Utilize Azure Key Vault to securely store and manage your application's passwords and other sensitive credentials. Azure Key Vault provides a centralized and highly secure location for storing secrets, keys, and certificates.\n\n * **Passwordless connections**: You can provide an additional layer of security and convenience for accessing resources in Azure by eliminating the need for passwords. This way you can reduce the risk of password-related vulnerabilities, such as weak passwords or password theft.",
+      "title": "Password found in configuration file",
+      "severity": "potential",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/key-vault",
+          "title": "Azure Key Vault documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/developer/intro/passwordless-overview",
+          "title": "Passwordless connections for Azure services"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/migration/migrate-spring-boot-to-azure-container-apps#inventory-configuration-sources-and-secrets",
+          "title": "Password found in configuration file"
+        },
+        {
+          "url": "https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault",
+          "title": "Read a secret from Azure Key Vault in a Spring Boot application"
+        },
+        {
+          "url": "https://search.maven.org/artifact/com.azure.spring/azure-spring-boot-starter-keyvault-secrets",
+          "title": "Azure Spring Boot Starter for Azure Key Vault Secrets"
+        }
+      ],
+      "labels": [
+        "source=springboot",
+        "source=eap7",
+        "source=eap",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=cloud-readiness",
+        "category=local-credential",
+        "password",
+        "security",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "configuration-management-0200": {
+      "id": "configuration-management-0200",
+      "description": "Application properties file detected",
+      "title": "Application properties file detected",
+      "severity": "potential",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Application Properties File",
+        "tag=Application properties file detected"
+      ]
+    },
+    "configuration-management-0300": {
+      "id": "configuration-management-0300",
+      "description": "Spring datasource properties detected",
+      "title": "Spring datasource properties detected",
+      "severity": "potential",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring Properties",
+        "tag=Spring datasource properties detected"
+      ]
+    },
+    "configuration-management-0400": {
+      "id": "configuration-management-0400",
+      "description": "Spring logging properties detected",
+      "title": "Spring logging properties detected",
+      "severity": "potential",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring Properties",
+        "tag=Spring logging properties detected"
+      ]
+    },
+    "configuration-management-technology-usage-0200": {
+      "id": "configuration-management-technology-usage-0200",
+      "description": "",
+      "title": "Application Properties File",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Embedded=Application Properties File",
+        "tag=Sustain=Application Properties File",
+        "tag=Configuration Management=Application Properties File"
+      ]
+    },
+    "configuration-management-technology-usage-0300": {
+      "id": "configuration-management-technology-usage-0300",
+      "description": "",
+      "title": "Spring Properties",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Spring Properties",
+        "tag=Configuration Management=Spring Properties",
+        "tag=Embedded=Spring Properties"
+      ]
+    },
+    "discover-java-files": {
+      "id": "discover-java-files",
+      "description": "",
+      "title": "Java source files",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Java Source"
+      ]
+    },
+    "discover-maven-xml": {
+      "id": "discover-maven-xml",
+      "description": "",
+      "title": "Maven XML file",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Maven XML"
+      ]
+    },
+    "discover-properties-file": {
+      "id": "discover-properties-file",
+      "description": "",
+      "title": "Properties file",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Properties"
+      ]
+    },
+    "javaee-technology-usage-00110": {
+      "id": "javaee-technology-usage-00110",
+      "description": "",
+      "title": "Bean Validation",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Bean Validation"
+      ]
+    },
+    "javaee-technology-usage-00210": {
+      "id": "javaee-technology-usage-00210",
+      "description": "",
+      "title": "Bean Validation",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Validation=Bean Validation",
+        "tag=Store=Bean Validation",
+        "tag=Java EE=Bean Validation"
+      ]
+    },
+    "mvc-01220": {
+      "id": "mvc-01220",
+      "description": "",
+      "title": "Embedded framework - Spring MVC",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring MVC",
+        "tag=Embedded framework - Spring MVC"
+      ]
+    },
+    "non-xml-technology-usage-20000": {
+      "id": "non-xml-technology-usage-20000",
+      "description": "",
+      "title": "Properties",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Properties",
+        "tag=Embedded=Properties",
+        "tag=Other=Properties"
+      ]
+    },
+    "oracle2openjdk-00004": {
+      "id": "oracle2openjdk-00004",
+      "description": "OpenJDK has its own 2D library, different from the proprietary JDK. This means that its performance may be different.\n Ensure during your tests that the application behaves as expected.",
+      "title": "Java 2D library usage",
+      "severity": "potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://access.redhat.com/solutions/2489791",
+          "title": "Knowledge base article OracleJDK vs. OpenJDK"
+        }
+      ],
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source=oraclejdk7+",
+        "source=oraclejdk",
+        "capability=openjdk7+",
+        "capability=openjdk",
+        "domain=java-upgrade",
+        "category=deprecated-apis",
+        "oracle-jdk",
+        "jdk",
+        "2DLibrary",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "spring-boot-to-azure-port-01000": {
+      "id": "spring-boot-to-azure-port-01000",
+      "description": "The application is setting the server port. To migrate a Java application that sets the server port to Azure Container Apps:\n\n * **Azure Container Apps allows you to expose port according to your Azure Container Apps resource configuration. For instance, a Spring Boot application listens to port of 8080 by default, but it can be set with server.port or environment variable SERVER_PORT as you need.",
+      "title": "Server port configuration found",
+      "severity": "potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/migration/migrate-spring-boot-to-azure-container-apps#identify-any-clients-relying-on-a-non-standard-port",
+          "title": "Identify any clients relying on a non-standard port"
+        }
+      ],
+      "labels": [
+        "source=springboot",
+        "target=azure-aks",
+        "target=azure-appservice",
+        "target=azure-container-apps",
+        "domain=cloud-readiness",
+        "category=spring-migration",
+        "port",
+        "server port",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "spring-boot-to-azure-restricted-config-01000": {
+      "id": "spring-boot-to-azure-restricted-config-01000",
+      "description": "The application uses restricted configurations for Azure Container Apps.\n These properties can be automatically injected into your application environment by Azure Container Apps to access managed Config Server and managed Eureka Server.\n Please remove them from your application, including configuration files, config server files, command line parameters, Java system attributes, and environment variables.\n\n If configured in **configuration files**: they will be ignored and overrided by Azure Container Apps.\n \n If configured in **Config Server files**, **command line parameters**, **Java system attribute**, **environment variable**: they need to be removed or you might experience conflicts and unexpected behavior.",
+      "title": "Restricted configurations found",
+      "severity": "potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/migration/migrate-spring-cloud-to-azure-container-apps#remove-restricted-configurations",
+          "title": "Migrate Spring Boot applications to Azure Container Apps - Remove restricted configurations"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/container-apps/java-config-server?tabs=azure-cli",
+          "title": "Connect to a managed Config Server for Spring in Azure Container Apps"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/container-apps/java-eureka-server?tabs=azure-cli",
+          "title": "Connect to a managed Eureka Server for Spring in Azure Container Apps"
+        }
+      ],
+      "labels": [
+        "target=azure-container-apps",
+        "source=springboot",
+        "domain=cloud-readiness",
+        "category=spring-migration",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "spring-boot-to-azure-spring-boot-version-01000": {
+      "id": "spring-boot-to-azure-spring-boot-version-01000",
+      "description": "The application is using the End of OSS Support of Spring Boot Version. \nWith the officially supported new versions from Spring, you can get the best experience. Here are some steps you can take to update your application to the latest version of Spring Boot:\n\n* Choose a **supported Spring Boot version**: Check out Spring Boot Support Versions, determine the most suitable supported Spring Boot version.\\n\\n\n\n* **Update Spring Boot version**: Update the Spring Boot version of your application. There are automated tools like Rewrite to help you with the migration.\n\n* **Address code compatibility**: Review your application's codebase for any potential compatibility issues with the target Spring Boot version. Update deprecated APIs or features, address any language or library changes, and ensure that your code follows best practices and standards.\n\n* **Test thoroughly**: Execute a comprehensive testing process to verify the compatibility and functionality of your application with the new Spring Boot version. Perform unit tests, integration tests, and system tests to validate that all components and dependencies work as expected.\"",
+      "title": "Spring Boot Version is End of OSS Support",
+      "severity": "mandatory",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/migration/migrate-spring-boot-to-azure-container-apps",
+          "title": "Migrate Spring Boot applications to Azure Container Apps"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/container-apps/java-microservice-get-started?tabs=azure-cli",
+          "title": "Launch your first Java microservice application with managed Java components in Azure Container Apps"
+        },
+        {
+          "url": "https://spring.io/projects/spring-boot/#support",
+          "title": "Spring Boot Supported Versions"
+        },
+        {
+          "url": "https://github.com/spring-projects/spring-boot/wiki/Supported-Versions",
+          "title": "Spring Boot Support Policy"
+        }
+      ],
+      "labels": [
+        "source=springboot",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=java-upgrade",
+        "category=framework-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "spring-framework-version-01000": {
+      "id": "spring-framework-version-01000",
+      "description": "Your application is using the Spring Framework version End of OSS Support. \nUpgrading to a supported version ensures better performance, security, and compatibility with modern tools.\n  1. Pick a Supported Version: Review the Spring Framework support policy and choose an actively supported version.\n  2. Update Your Project: Change the Spring Framework version in your pom.xml or build.gradle.\n  3. Fix Compatibility Issues: Update deprecated code, replace removed features, and ensure dependencies are compatible with the new Spring Framework version.\n  4. Thoroughly Test: Run unit, integration, and end-to-end tests to make sure everything still works after the upgrade.",
+      "title": "Spring Framework Version End of OSS Support",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://spring.io/projects/spring-framework#support",
+          "title": "Spring Framework Supported Versions"
+        },
+        {
+          "url": "https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions",
+          "title": "Spring Framework Support Policy"
+        }
+      ],
+      "labels": [
+        "source=spring",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=java-upgrade",
+        "category=framework-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "technology-usage-3rd-party-spring-03001-0": {
+      "id": "technology-usage-3rd-party-spring-03001-0",
+      "description": "",
+      "title": "Spring Boot Configuration",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Spring Boot Configuration",
+        "tag=Embedded=Spring Boot Configuration",
+        "tag=Configuration Management=Spring Boot Configuration"
+      ]
+    },
+    "technology-usage-3rd-party-spring-03001-1": {
+      "id": "technology-usage-3rd-party-spring-03001-1",
+      "description": "",
+      "title": "Spring Boot Auto-configuration",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Spring Boot Auto-configuration",
+        "tag=Embedded=Spring Boot Auto-configuration",
+        "tag=Configuration Management=Spring Boot Auto-configuration"
+      ]
+    },
+    "technology-usage-3rd-party-spring-03001-2": {
+      "id": "technology-usage-3rd-party-spring-03001-2",
+      "description": "",
+      "title": "Spring Boot Component Scan",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Spring Boot Component Scan",
+        "tag=Embedded=Spring Boot Component Scan",
+        "tag=Configuration Management=Spring Boot Component Scan"
+      ]
+    },
+    "technology-usage-database-01200": {
+      "id": "technology-usage-database-01200",
+      "description": "",
+      "title": "JPA Queries",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Store=JPA named queries",
+        "tag=Persistence=JPA named queries",
+        "tag=Java EE=JPA named queries"
+      ]
+    },
+    "technology-usage-mvc-01200": {
+      "id": "technology-usage-mvc-01200",
+      "description": "",
+      "title": "Spring MVC",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=View=Spring MVC",
+        "tag=Embedded=Spring MVC",
+        "tag=MVC=Spring MVC"
+      ]
+    }
+  }
+}
