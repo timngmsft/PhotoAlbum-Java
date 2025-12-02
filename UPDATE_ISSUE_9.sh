@@ -33,5 +33,6 @@ if [ -f .github/appmod/appcat/result/summary.md ]; then
 else
     # Extract the summary section from ASSESSMENT_RESULTS.md
     # This extracts content between "# App Modernization Assessment Summary" and "## Manual Action Required"
+    # The 'head -n -1' removes the "## Manual Action Required" line at the end
     sed -n '/^# App Modernization Assessment Summary$/,/^## Manual Action Required$/p' ASSESSMENT_RESULTS.md | head -n -1
 fi
