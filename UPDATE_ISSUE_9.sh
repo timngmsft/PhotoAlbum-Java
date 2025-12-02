@@ -26,4 +26,12 @@ echo "Assessment completed successfully!"
 echo ""
 echo "Summary content to post to issue #9:"
 echo "======================================"
-cat .github/appmod/appcat/result/summary.md 2>/dev/null || cat ASSESSMENT_RESULTS.md | sed -n '/^# App Modernization Assessment Summary$/,/^## Manual Action Required$/p' | head -n -1
+
+# Try to read the summary.md file first, if it doesn't exist, extract it from ASSESSMENT_RESULTS.md
+if [ -f .github/appmod/appcat/result/summary.md ]; then
+    cat .github/appmod/appcat/result/summary.md
+else
+    # Extract the summary section from ASSESSMENT_RESULTS.md
+    # This extracts content between "# App Modernization Assessment Summary" and "## Manual Action Required"
+    cat ASSESSMENT_RESULTS.md | sed -n '/^# App Modernization Assessment Summary$/,/^## Manual Action Required$/p' | head -n -1
+fi
