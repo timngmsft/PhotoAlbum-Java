@@ -32,14 +32,14 @@ The assessment has been completed successfully. Below is the summary from `.gith
 **Total Applications**: 1
 
 **Name: photo-album**
-- Mandatory: 3 issues
-- Potential: 10 issues
-- Optional: 0 issues
+- Mandatory: 3 issue types
+- Potential: 5 issue types
+- Optional: 0 issue types
 
 > **Severity Levels Explained:**
 > - **Mandatory**: The issue has to be resolved for the migration to be successful.
 > - **Potential**: This issue may be blocking in some situations but not in others. These issues should be reviewed to determine whether a change is required or not.
-> - **Optional**: The issue discovered is real issue fixing which could improve the app after migration, however it is not blocking.
+> - **Optional**: The issue discovered is a real issue whose fixing could improve the app after migration, however it is not blocking.
 
 ## Applications Profile
 
@@ -50,11 +50,11 @@ The assessment has been completed successfully. Below is the summary from `.gith
 - **Build Tools**: Maven
 
 **Key Findings**:
-- **Mandatory Issues (13 locations)**:
+- **Mandatory Issues (3 issue types, 13 total locations)**:
   - <!--ruleid=spring-boot-to-azure-spring-boot-version-01000-->Spring Boot Version is End of OSS Support (7 locations found)
   - <!--ruleid=azure-java-version-02000-->Legacy Java version (3 locations found)
   - <!--ruleid=spring-framework-version-01000-->Spring Framework Version End of OSS Support (3 locations found)
-- **Potential Issues (14 locations)**:
+- **Potential Issues (5 issue types, 14 total locations)**:
   - <!--ruleid=oracle2openjdk-00004-->Java 2D library usage (1 location found)
   - <!--ruleid=azure-database-microsoft-oracle-07000-->Oracle database found (6 locations found)
   - <!--ruleid=spring-boot-to-azure-port-01000-->Server port configuration found (2 locations found)
@@ -91,16 +91,17 @@ The following files were generated during the assessment:
 
 ## Key Issues Identified
 
-### Critical (Mandatory)
-1. **Spring Boot Version End of OSS Support** - The current Spring Boot version is no longer supported
-2. **Legacy Java Version (JDK 1.8)** - Java 8 is outdated and should be upgraded
-3. **Spring Framework Version End of OSS Support** - Spring Framework version needs updating
+### Critical (Mandatory) - 3 Issue Types, 13 Total Locations
+1. **Spring Boot Version End of OSS Support** (7 locations) - The current Spring Boot version is no longer supported
+2. **Legacy Java Version (JDK 1.8)** (3 locations) - Java 8 is outdated and should be upgraded
+3. **Spring Framework Version End of OSS Support** (3 locations) - Spring Framework version needs updating
 
-### Important (Potential)
-1. **Oracle Database Dependency** - Consider migration to Azure-compatible databases
-2. **Password Storage** - Passwords found in configuration files should be moved to secure vaults
-3. **Server Port Configuration** - Port configurations may need adjustment for Azure deployment
-4. **Restricted Configurations** - Some configurations may not be compatible with Azure
+### Important (Potential) - 5 Issue Types, 14 Total Locations
+1. **Oracle Database Dependency** (6 locations) - Consider migration to Azure-compatible databases
+2. **Password Storage** (3 locations) - Passwords found in configuration files should be moved to secure vaults
+3. **Server Port Configuration** (2 locations) - Port configurations may need adjustment for Azure deployment
+4. **Restricted Configurations** (2 locations) - Some configurations may not be compatible with Azure
+5. **Java 2D Library Usage** (1 location) - May require review for Azure compatibility
 
 ## Recommended Actions
 
